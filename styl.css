@@ -1,0 +1,86 @@
+/* Container for the search bar */
+.search-bar {
+  margin: 50px auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1; /* Same as dropdown background to blend in */
+  border-radius: 5px;
+  overflow: hidden; /* To hide any border overlaps */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+
+/* Styling for the dropdown, input, and pseudo-icon */
+.search-bar select,
+.search-bar input {
+  border: none; /* Remove borders to prevent double border effect */
+  outline: none; /* Remove default focus outline */
+  font-size: 15px;
+  margin: 0; /* Remove margins to prevent gaps */
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Add transition for border */
+}
+
+/* Styling for the select dropdown */
+.search-bar select {
+  padding: 10px;
+  border-right: 1px solid #ccc; /* Add a border only to the right */
+  background-color: #f1f1f1; /* Match the container background */
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+/* Highlight border on focus */
+.search-bar select:focus {
+  border-color: #4CAF50; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow effect */
+}
+
+/* Styling for the input field */
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border-left: 1px solid #ccc; /* Add a border only to the left */
+  border-right: 1px solid #ccc; /* Add a border only to the right */
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Add transition for border */
+}
+
+/* Highlight border on focus */
+.search-bar input:focus {
+  border-color: #4CAF50; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow effect */
+}
+
+/* Styling for the search icon */
+.search-bar .search-icon {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Optional hover effect for better UX */
+.search-bar .search-icon:hover {
+  background-color: #45a049;
+}
+
+/* Icon style using a pseudo-element */
+.search-bar .search-icon::before {
+  content: "\1F50D"; /* Unicode for magnifying glass */
+  display: block;
+  font-size: 18px;
+}
+
+/* Additional styles for a cohesive look */
+.search-bar select,
+.search-bar input,
+.search-bar .search-icon {
+  height: 40px; /* Consistent height for all elements */
+}
